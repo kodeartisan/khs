@@ -1,19 +1,21 @@
-package com.qodr.khs;
+package com.qodr.khs.mvp.khs;
 
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.ActionBarDrawerToggle;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.DefaultItemAnimator;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
-import android.util.Log;
 import android.view.Menu;
 
+import com.qodr.khs.JadwalKuliahAdapter;
+import com.qodr.khs.R;
 import com.qodr.khs.api.ApiInterface;
 import com.qodr.khs.api.ApiService;
+import com.qodr.khs.base.BaseActivity;
 import com.qodr.khs.model.JadwalKuliah;
 import com.qodr.khs.model.LoginResponse;
 
@@ -27,9 +29,9 @@ import retrofit2.Callback;
 import retrofit2.Response;
 
 
-public class MainActivity extends AppCompatActivity {
+public class KhsActivity extends AppCompatActivity {
 
-    public static final String TAG = MainActivity.class.getSimpleName();
+    public static final String TAG = KhsActivity.class.getSimpleName();
 
     protected List<JadwalKuliah> mJadwalKuliah = new ArrayList<>();
 

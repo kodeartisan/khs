@@ -1,0 +1,308 @@
+<android.support.design.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/background_light"
+    android:fitsSystemWindows="true"
+    >
+
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/main.appbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        android:fitsSystemWindows="true"
+        >
+
+        <android.support.design.widget.CollapsingToolbarLayout
+            android:id="@+id/main.collapsing"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_scrollFlags="scroll|exitUntilCollapsed"
+            android:fitsSystemWindows="true"
+            app:contentScrim="?attr/colorPrimary"
+            app:expandedTitleMarginStart="48dp"
+            app:expandedTitleMarginEnd="64dp"
+            >
+
+            <LinearLayout
+                android:layout_marginTop="30dp"
+                android:padding="10dp"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <LinearLayout
+                    android:baselineAligned="false"
+
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <LinearLayout
+                        android:gravity="center"
+
+                        android:layout_weight="1"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content">
+
+                        <ImageView
+
+                            android:id="@+id/image_profile"
+                            android:layout_width="100dp"
+                            android:layout_height="100dp"
+                            android:src="@mipmap/ic_launcher"
+
+                            />
+                    </LinearLayout>
+                    <LinearLayout
+
+                        android:orientation="vertical"
+                        android:layout_weight="1.5"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content">
+                        <TextView
+
+
+                            android:text="Selamat Datang"
+                            android:textSize="20sp"
+                            android:textStyle="bold"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+                        <View
+
+                            android:layout_marginTop="4dp"
+                            android:layout_marginBottom="4dp"
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:background="#c0c0c0"/>
+
+                        <TextView
+                            android:id="@+id/nama"
+
+                            android:textSize="18sp"
+                            android:textStyle="bold"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+
+                        <TextView
+                            android:id="@+id/angkatan"
+
+                            android:textSize="10sp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+                    </LinearLayout>
+                </LinearLayout>
+                <View
+
+                    android:layout_marginTop="14dp"
+                    android:layout_marginBottom="14dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#c0c0c0"/>
+                <LinearLayout
+                    android:layout_marginBottom="10dp"
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:id="@+id/jurusan"
+
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="18sp"
+                        android:textStyle="bold"/>
+
+                    <TextView
+                        android:id="@+id/nim"
+
+                        android:textSize="10sp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <android.support.v7.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+                app:layout_collapseMode="pin"
+                />
+        </android.support.design.widget.CollapsingToolbarLayout>
+    </android.support.design.widget.AppBarLayout>
+
+    <android.support.v4.widget.NestedScrollView
+        android:id="@+id/scrollview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        >
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <android.support.v7.widget.CardView
+                android:foreground="?android:attr/selectableItemBackground"
+                android:clickable="true"
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:layout_margin="4dp"
+                >
+
+
+                 <LinearLayout
+                     android:orientation="vertical"
+                     android:padding="10dp"
+                     android:layout_width="match_parent"
+                     android:layout_height="wrap_content">
+                        <TextView
+                            android:textSize="18sp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Semester"/>
+                         <TextView
+                             android:id="@+id/semester"
+                             android:textSize="12sp"
+                             android:layout_width="wrap_content"
+                             android:layout_height="wrap_content"
+                             />
+                 </LinearLayout>
+
+
+            </android.support.v7.widget.CardView>
+            <android.support.v7.widget.CardView
+                android:foreground="?android:attr/selectableItemBackground"
+                android:clickable="true"
+
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:layout_margin="4dp"
+                >
+
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:padding="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:textSize="18sp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="IP Kumulatif IPK"/>
+                    <TextView
+                        android:id="@+id/ipk"
+                        android:textSize="12sp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        />
+                </LinearLayout>
+
+
+            </android.support.v7.widget.CardView>
+            <android.support.v7.widget.CardView
+                android:foreground="?android:attr/selectableItemBackground"
+                android:clickable="true"
+
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:layout_margin="4dp"
+                >
+
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:padding="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:textSize="18sp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Jumlah SKS Semester Ini"/>
+                    <TextView
+                        android:id="@+id/sks"
+                        android:textSize="12sp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        />
+                </LinearLayout>
+
+
+            </android.support.v7.widget.CardView>
+            <android.support.v7.widget.CardView
+                android:foreground="?android:attr/selectableItemBackground"
+                android:clickable="true"
+
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:layout_margin="4dp"
+                >
+
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:padding="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:textSize="18sp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Jumlah SKS Total Diambil"/>
+                    <TextView
+                        android:id="@+id/jumlah_sks"
+                        android:textSize="12sp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                         />
+                </LinearLayout>
+
+
+            </android.support.v7.widget.CardView>
+            <android.support.v7.widget.CardView
+                android:foreground="?android:attr/selectableItemBackground"
+                android:clickable="true"
+
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:layout_margin="4dp"
+                >
+
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:padding="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:textSize="18sp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="SPP Semester Ini"/>
+                    <TextView
+                        android:id="@+id/spp"
+                        android:textSize="12sp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text=""/>
+                </LinearLayout>
+
+
+            </android.support.v7.widget.CardView>
+
+        </LinearLayout>
+    </android.support.v4.widget.NestedScrollView>
+
+    <android.support.design.widget.FloatingActionButton
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:layout_margin="16dp"
+        android:src="@android:drawable/ic_menu_add"
+        app:layout_anchorGravity="bottom|end"
+        app:layout_anchor="@id/scrollview"
+        />
+</android.support.design.widget.CoordinatorLayout>
